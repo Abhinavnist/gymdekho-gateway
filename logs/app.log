@@ -1,0 +1,2146 @@
+INFO:     Will watch for changes in these directories: ['/Users/pop/Desktop/gymconnect-ai/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [23850] using WatchFiles
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/main.py", line 9, in <module>
+    from app.api.v1.router import api_router
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/router.py", line 2, in <module>
+    from app.api.v1 import auth, gyms, members, leads, chatbot, notifications, reviews, subscriptions, checkins, uploads, admin
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/reviews.py", line 85, in <module>
+    @router.get("/admin/reviews")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 994, in decorator
+    self.add_api_route(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 933, in add_api_route
+    route = route_class(
+            ^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 554, in __init__
+    self.dependant = get_dependant(path=self.path_format, call=self.endpoint)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 285, in get_dependant
+    param_details = analyze_param(
+                    ^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 404, in analyze_param
+    assert depends is None, (
+           ^^^^^^^^^^^^^^^
+AssertionError: Cannot specify `Depends` in `Annotated` and default value together for 'current_user'
+WARNING:  WatchFiles detected changes in 'app/api/v1/reviews.py'. Reloading...
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/main.py", line 9, in <module>
+    from app.api.v1.router import api_router
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/router.py", line 2, in <module>
+    from app.api.v1 import auth, gyms, members, leads, chatbot, notifications, reviews, subscriptions, checkins, uploads, admin
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/subscriptions.py", line 127, in <module>
+    @router.get("/admin/all")
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 994, in decorator
+    self.add_api_route(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 933, in add_api_route
+    route = route_class(
+            ^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 554, in __init__
+    self.dependant = get_dependant(path=self.path_format, call=self.endpoint)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 285, in get_dependant
+    param_details = analyze_param(
+                    ^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 404, in analyze_param
+    assert depends is None, (
+           ^^^^^^^^^^^^^^^
+AssertionError: Cannot specify `Depends` in `Annotated` and default value together for 'current_user'
+WARNING:  WatchFiles detected changes in 'app/api/v1/subscriptions.py'. Reloading...
+INFO:     Started server process [23944]
+INFO:     Waiting for application startup.
+2026-06-02 14:51:30 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:51:30 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58052 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/database/queries/admin_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 14:54:05 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 14:54:05 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [23944]
+INFO:     Started server process [24134]
+INFO:     Waiting for application startup.
+2026-06-02 14:54:06 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:54:06 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/database/queries/admin_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 14:54:12 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 14:54:12 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24134]
+INFO:     Started server process [24139]
+INFO:     Waiting for application startup.
+2026-06-02 14:54:13 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:54:13 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 14:54:26 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 14:54:26 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24139]
+INFO:     Started server process [24168]
+INFO:     Waiting for application startup.
+2026-06-02 14:54:27 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:54:27 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 14:54:36 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 14:54:36 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24168]
+INFO:     Started server process [24184]
+INFO:     Waiting for application startup.
+2026-06-02 14:54:37 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:54:37 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/gyms.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 14:54:45 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 14:54:45 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24184]
+INFO:     Started server process [24206]
+INFO:     Waiting for application startup.
+2026-06-02 14:54:45 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 14:54:45 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58104 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/database/queries/user_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:03:52 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:03:52 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24206]
+INFO:     Started server process [24753]
+INFO:     Waiting for application startup.
+2026-06-02 15:03:52 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:03:52 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/auth_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:04:10 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:04:10 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24753]
+INFO:     Started server process [24771]
+INFO:     Waiting for application startup.
+2026-06-02 15:04:10 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:04:10 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:04:22 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:04:22 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24771]
+INFO:     Started server process [24787]
+INFO:     Waiting for application startup.
+2026-06-02 15:04:22 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:04:22 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:04:30 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:04:30 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24787]
+INFO:     Started server process [24795]
+INFO:     Waiting for application startup.
+2026-06-02 15:04:31 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:04:31 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/utils/email.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:04:38 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:04:38 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24795]
+INFO:     Started server process [24809]
+INFO:     Waiting for application startup.
+2026-06-02 15:04:39 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:04:39 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/database/queries/gym_admin_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:04:57 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:04:57 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24809]
+INFO:     Started server process [24827]
+INFO:     Waiting for application startup.
+2026-06-02 15:04:58 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:04:58 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:05:05 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:05:05 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24827]
+INFO:     Started server process [24835]
+INFO:     Waiting for application startup.
+2026-06-02 15:05:05 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:05:05 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58182 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58182 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:05:12 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:05:12 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24835]
+INFO:     Started server process [24839]
+INFO:     Waiting for application startup.
+2026-06-02 15:05:13 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:05:13 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:05:22 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:05:22 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24839]
+INFO:     Started server process [24851]
+INFO:     Waiting for application startup.
+2026-06-02 15:05:23 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:05:23 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58200 - "GET /api/v1/gyms/?page=1&limit=20 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:05:44 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:05:44 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24851]
+INFO:     Started server process [24884]
+INFO:     Waiting for application startup.
+2026-06-02 15:05:45 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:05:45 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:05:55 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:05:55 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24884]
+INFO:     Started server process [24897]
+INFO:     Waiting for application startup.
+2026-06-02 15:05:55 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:05:55 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:06:06 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:06:06 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24897]
+INFO:     Started server process [24903]
+INFO:     Waiting for application startup.
+2026-06-02 15:06:07 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:06:07 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/member_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:06:16 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:06:16 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24903]
+INFO:     Started server process [24907]
+INFO:     Waiting for application startup.
+2026-06-02 15:06:16 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:06:16 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/member_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:06:33 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:06:33 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24907]
+INFO:     Started server process [24935]
+INFO:     Waiting for application startup.
+2026-06-02 15:06:34 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:06:34 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/gyms.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:06:45 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:06:45 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24935]
+INFO:     Started server process [24972]
+INFO:     Waiting for application startup.
+2026-06-02 15:06:45 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:06:45 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/gyms.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:01 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:01 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24972]
+INFO:     Started server process [24983]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:02 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:02 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/gyms.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:09 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:09 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24983]
+INFO:     Started server process [24987]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:09 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:09 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/webhooks.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:31 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:31 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24987]
+INFO:     Started server process [25004]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:32 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:32 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:37 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:37 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25004]
+INFO:     Started server process [25013]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:38 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:38 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:45 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:45 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25013]
+INFO:     Started server process [25042]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:46 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:46 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/database/queries/__init__.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:51 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:51 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25042]
+INFO:     Started server process [25049]
+INFO:     Waiting for application startup.
+2026-06-02 15:07:52 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:07:52 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/webhooks.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:07:59 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:07:59 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25049]
+INFO:     Started server process [25055]
+INFO:     Waiting for application startup.
+2026-06-02 15:08:00 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:08:00 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/webhooks.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:08:05 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:08:05 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25055]
+INFO:     Started server process [25060]
+INFO:     Waiting for application startup.
+2026-06-02 15:08:06 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:08:06 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+2026-06-02 15:09:20 | WARNING  | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-02 15:09:20 | ERROR    | app.main | Unhandled exception on POST http://localhost:8000/api/v1/auth/login
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 33, in login
+    tokens = await auth_service.login_user(db, body.email, body.phone, body.password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/auth_service.py", line 100, in login_user
+    if not verify_password(password, user["password_hash"]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/core/security.py", line 17, in verify_password
+    return pwd_context.verify(plain_password, hashed_password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/context.py", line 2347, in verify
+    return record.verify(secret, hash, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+         ^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+INFO:     127.0.0.1:58261 - "POST /api/v1/auth/login HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 33, in login
+    tokens = await auth_service.login_user(db, body.email, body.phone, body.password)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/auth_service.py", line 100, in login_user
+    if not verify_password(password, user["password_hash"]):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/core/security.py", line 17, in verify_password
+    return pwd_context.verify(plain_password, hashed_password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/context.py", line 2347, in verify
+    return record.verify(secret, hash, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+         ^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+WARNING:  WatchFiles detected changes in 'venv/lib/python3.12/site-packages/bcrypt/__init__.py', 'venv/lib/python3.12/site-packages/bcrypt/__about__.py', 'venv/lib/python3.12/site-packages/~crypt/__init__.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:09:35 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:09:35 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25060]
+INFO:     Started server process [25159]
+INFO:     Waiting for application startup.
+2026-06-02 15:09:39 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:09:39 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58276 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58278 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+2026-06-02 15:10:06 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/stats
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 32, in platform_stats
+    stats = await get_platform_stats(db)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 6, in get_platform_stats
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column "total_amount" does not exist
+LINE 9:                 (SELECT COALESCE(SUM(total_amount), 0) FROM ...
+                                             ^
+HINT:  Perhaps you meant to reference the column "payment_transactions.tax_amount".
+INFO:     127.0.0.1:58280 - "GET /api/v1/admin/stats HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 32, in platform_stats
+    stats = await get_platform_stats(db)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 6, in get_platform_stats
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column "total_amount" does not exist
+LINE 9:                 (SELECT COALESCE(SUM(total_amount), 0) FROM ...
+                                             ^
+HINT:  Perhaps you meant to reference the column "payment_transactions.tax_amount".
+WARNING:  WatchFiles detected changes in 'app/database/queries/admin_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:10:22 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:10:22 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25159]
+INFO:     Started server process [25231]
+INFO:     Waiting for application startup.
+2026-06-02 15:10:23 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:10:23 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58288 - "GET /api/v1/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58290 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58294 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58374 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58404 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58404 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'tests/test_full_flow.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:17:13 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:17:13 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25231]
+INFO:     Started server process [25601]
+INFO:     Waiting for application startup.
+2026-06-02 15:17:14 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:17:14 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58437 - "GET /api/v1/subscriptions/plans?target_type=GYM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "GET /api/v1/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "POST /api/v1/auth/refresh-token HTTP/1.1" 200 OK
+2026-06-02 15:20:29 | ERROR    | app.main | Unhandled exception on PUT http://localhost:8000/api/v1/auth/me
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58466 - "PUT /api/v1/auth/me HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58468 - "POST /api/v1/auth/register HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58468 - "GET /api/v1/admin/users?search=admin_a21a2707%40gymconnect.test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58468 - "GET /api/v1/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58468 - "GET /api/v1/admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58468 - "GET /api/v1/admin/users?role=SUPER_ADMIN HTTP/1.1" 200 OK
+2026-06-02 15:20:29 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/gyms
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58468 - "GET /api/v1/admin/gyms HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+2026-06-02 15:20:29 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/gyms?approval_status=PENDING
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58470 - "GET /api/v1/admin/gyms?approval_status=PENDING HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58472 - "GET /api/v1/admin/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58472 - "GET /api/v1/subscriptions/admin/all HTTP/1.1" 200 OK
+2026-06-02 15:20:29 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58472 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58472 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58472 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+2026-06-02 15:20:29 | ERROR    | app.main | Unhandled exception on POST http://localhost:8000/api/v1/gyms/
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 101, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+INFO:     127.0.0.1:58472 - "POST /api/v1/gyms/ HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 101, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/my HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/?search=FitZone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None/plans HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None/hours HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None/facilities HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None/reviews HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/gyms/None/reviews/summary HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "GET /api/v1/chatbot/conversation/75f21f88-fa45-427f-a050-85b5826543ea?gym_id= HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/lead-capture HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58477 - "POST /api/v1/chatbot/lead-capture HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58490 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+2026-06-02 15:21:35 | ERROR    | app.main | Unhandled exception on PUT http://localhost:8000/api/v1/auth/me
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58492 - "PUT /api/v1/auth/me HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58494 - "POST /api/v1/auth/register HTTP/1.1" 422 Unprocessable Entity
+2026-06-02 15:21:35 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/gyms
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58496 - "GET /api/v1/admin/gyms HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58499 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+2026-06-02 15:21:50 | ERROR    | app.main | Unhandled exception on PUT http://localhost:8000/api/v1/auth/me
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58501 - "PUT /api/v1/auth/me HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/_queries.py", line 155, in validate_and_reorder_params
+    return [vars[item] for item in order]  # type: ignore[call-overload]
+            ~~~~^^^^^^
+KeyError: 'full_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/auth.py", line 68, in update_profile
+    updated = await user_queries.update_user_profile(db, current_user["id"], body.model_dump(exclude_none=True))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/user_queries.py", line 68, in update_user_profile
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: query parameter missing: city, country, date_of_birth, full_name, gender, phone, state, zipcode
+INFO:     127.0.0.1:58546 - "GET /api/v1/admin/gyms HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58548 - "GET /api/v1/admin/gyms HTTP/1.1" 401 Unauthorized
+WARNING:  WatchFiles detected changes in 'app/database/queries/user_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:22:58 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:22:58 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25601]
+INFO:     Started server process [26004]
+INFO:     Waiting for application startup.
+2026-06-02 15:22:58 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:22:58 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/models/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:23:08 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:23:08 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26004]
+INFO:     Started server process [26012]
+INFO:     Waiting for application startup.
+2026-06-02 15:23:09 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:23:09 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/models/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:23:14 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:23:14 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26012]
+INFO:     Started server process [26018]
+INFO:     Waiting for application startup.
+2026-06-02 15:23:15 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:23:15 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/models/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:23:21 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:23:21 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26018]
+INFO:     Started server process [26022]
+INFO:     Waiting for application startup.
+2026-06-02 15:23:21 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:23:21 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/models/auth.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:23:32 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:23:32 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26022]
+INFO:     Started server process [26037]
+INFO:     Waiting for application startup.
+2026-06-02 15:23:32 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:23:32 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests/test_full_flow.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:23:46 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:23:46 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26037]
+INFO:     Started server process [26071]
+INFO:     Waiting for application startup.
+2026-06-02 15:23:46 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:23:47 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58573 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58575 - "GET /api/v1/gyms/my HTTP/1.1" 422 Unprocessable Entity
+2026-06-02 15:23:58 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/gyms
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58577 - "GET /api/v1/admin/gyms HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+2026-06-02 15:24:04 | ERROR    | app.main | Unhandled exception on GET http://localhost:8000/api/v1/admin/gyms
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+INFO:     127.0.0.1:58579 - "GET /api/v1/admin/gyms HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/admin.py", line 89, in list_gyms
+    rows, total = await list_gyms_admin(db, approval_status, page, limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/admin_queries.py", line 113, in list_gyms_admin
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedColumn: column g.owner_id does not exist
+LINE 5:             JOIN users u ON g.owner_id = u.id
+                                    ^
+WARNING:  WatchFiles detected changes in 'app/database/queries/admin_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:24:13 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:24:13 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26071]
+INFO:     Started server process [26095]
+INFO:     Waiting for application startup.
+2026-06-02 15:24:14 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:24:14 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/v1/gyms.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:25:11 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:25:11 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26095]
+INFO:     Started server process [26141]
+INFO:     Waiting for application startup.
+2026-06-02 15:25:12 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:25:12 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58710 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/refresh-token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "PUT /api/v1/auth/me HTTP/1.1" 200 OK
+2026-06-02 15:29:29 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/users?search=admin_abd45498%40gymconnect.io HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/stats HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/users?role=SUPER_ADMIN HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/gyms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/gyms?approval_status=PENDING HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/admin/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/subscriptions/admin/all HTTP/1.1" 200 OK
+2026-06-02 15:29:29 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58710 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58710 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+2026-06-02 15:29:30 | ERROR    | app.main | Unhandled exception on POST http://localhost:8000/api/v1/gyms/
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 67, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+INFO:     127.0.0.1:58710 - "POST /api/v1/gyms/ HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 67, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/my HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/?city=Mumbai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/?search=FitZone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None/plans HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None/hours HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None/facilities HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None/reviews HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/gyms/None/reviews/summary HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/message HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "GET /api/v1/chatbot/conversation/64eb8edb-6d7a-4d93-beac-c0142a71a93a?gym_id= HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/lead-capture HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58712 - "POST /api/v1/chatbot/lead-capture HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:58811 - "POST /api/v1/auth/login HTTP/1.1" 401 Unauthorized
+2026-06-02 15:31:02 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58813 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+2026-06-02 15:31:07 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58817 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+2026-06-02 15:32:15 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58832 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58834 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+2026-06-02 15:32:28 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58837 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58839 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58841 - "POST /api/v1/gyms/ HTTP/1.1" 422 Unprocessable Entity
+2026-06-02 15:32:53 | WARNING  | app.utils.email | SendGrid API key not configured. Email not sent.
+INFO:     127.0.0.1:58849 - "POST /api/v1/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58851 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+2026-06-02 15:32:53 | ERROR    | app.main | Unhandled exception on POST http://localhost:8000/api/v1/gyms/
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 67, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+INFO:     127.0.0.1:58853 - "POST /api/v1/gyms/ HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/api/v1/gyms.py", line 67, in create_gym
+    gym = await gym_service.create_gym(db, current_user["id"], body.model_dump())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/services/gym_service.py", line 28, in create_gym
+    gym = await gym_queries.create_gym(db, gym_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pop/Desktop/gymconnect-ai/backend/app/database/queries/gym_queries.py", line 7, in create_gym
+    await cur.execute(
+  File "/Users/pop/Desktop/gymconnect-ai/backend/venv/lib/python3.12/site-packages/psycopg/cursor_async.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.ProgrammingError: cannot adapt type 'dict' using placeholder '%s' (format: AUTO)
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:33:55 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:33:55 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26141]
+INFO:     Started server process [26779]
+INFO:     Waiting for application startup.
+2026-06-02 15:33:56 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:33:56 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/gym_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:33:59 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:33:59 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26779]
+INFO:     Started server process [26782]
+INFO:     Waiting for application startup.
+2026-06-02 15:33:59 | INFO     | app.main | Starting GymConnect AI [development]
+2026-06-02 15:33:59 | INFO     | app.database.connection | Database connection pool created.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-06-02 15:34:21 | INFO     | app.database.connection | Database connection pool closed.
+2026-06-02 15:34:21 | INFO     | app.main | Shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26782]
+INFO:     Stopping reloader process [23850]

@@ -1,0 +1,42 @@
+# ─── Web Framework ───────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ─── Database ────────────────────────────────────────────────────────────────
+psycopg[binary,pool]==3.3.4      # psycopg3 with async support + connection pooling
+
+# ─── Auth & Security ─────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.12         # for form data / file uploads
+
+# ─── Config ──────────────────────────────────────────────────────────────────
+pydantic[email]==2.11.5
+pydantic-settings==2.9.1
+python-dotenv==1.0.1
+
+# ─── HTTP Client ─────────────────────────────────────────────────────────────
+httpx==0.28.1
+
+# ─── AI / Chatbot (Google Gemini) ────────────────────────────────────────────
+google-generativeai==0.8.3
+
+# ─── Communication ───────────────────────────────────────────────────────────
+twilio==9.3.7
+sendgrid==6.11.0
+
+# ─── File Upload ─────────────────────────────────────────────────────────────
+cloudinary==1.41.0
+
+# ─── Payment ─────────────────────────────────────────────────────────────────
+razorpay==1.4.2
+
+# ─── Utilities ───────────────────────────────────────────────────────────────
+python-slugify==8.0.4
+phonenumbers==8.13.50            # phone number validation
+
+# ─── Dev / Testing ───────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.1                    # also used for TestClient
