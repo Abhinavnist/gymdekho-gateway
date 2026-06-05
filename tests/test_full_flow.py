@@ -18,7 +18,7 @@ BASE = "http://localhost:8000/api/v1"
 
 PASS = "✅"
 FAIL = "❌"
-WARN = "⚠️ "
+WARN = "⚠️"
 SEP  = "─" * 60
 
 results: list[tuple[str, bool, str]] = []
