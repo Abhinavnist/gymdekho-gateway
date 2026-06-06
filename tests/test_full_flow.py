@@ -65,7 +65,7 @@ def test_health(c: httpx.Client):
     check("Version endpoint", r)
 
 
-# ─── 2. SUPER ADMIN LOGIN ─────────────────────────────────────────────────────
+# ─── 2. SUPER ADMIN LOGIN ────────────────────────────────────────────────────
 
 def test_super_admin_login(c: httpx.Client):
     section("2. SUPER ADMIN — Login")
