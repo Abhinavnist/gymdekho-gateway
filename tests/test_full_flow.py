@@ -62,7 +62,7 @@ def test_health(c: httpx.Client):
     r = c.get(f"{BASE}/health")
     check("Health endpoint", r)
     r = c.get(f"{BASE}/version")
-    check("Version endpoint", r)
+    check("Version endpoints", r)
 
 
 # ─── 2. SUPER ADMIN LOGIN ─────────────────────────────────────────────────────
