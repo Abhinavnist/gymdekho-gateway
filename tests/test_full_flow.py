@@ -50,7 +50,7 @@ def section(title: str):
     print(SEP)
 
 
-# ─── State shared across tests ───────────────────────────────────────────────
+# ─── State shared across tests ──────────────────────────────────────────────
 
 state = {}   # filled as we go
 
