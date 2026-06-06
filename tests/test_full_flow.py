@@ -55,7 +55,7 @@ def section(title: str):
 state = {}   # filled as we go
 
 
-# ─── 1. HEALTH ────────────────────────────────────────────────────────────────
+# ─── 1. HEALTH ───────────────────────────────────────────────────────────────
 
 def test_health(c: httpx.Client):
     section("1. HEALTH CHECK")
