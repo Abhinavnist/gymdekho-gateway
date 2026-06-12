@@ -1,5 +1,5 @@
 """
-Run this once to apply the schema to your database.
+Run this once to apply the schema to your database ok.
 Usage: python scripts/run_migrations.py
 """
 import os
