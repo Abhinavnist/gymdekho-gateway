@@ -1,6 +1,6 @@
 """
 Run this once to apply the schema to your database ok.
-Usage: python scripts/run_migrations.py
+Usage: python scripts/run_migrations.py ---
 """
 import os
 import sys
