@@ -1,6 +1,6 @@
 """
 GymConnect AI — Full End-to-End Flow Test
-==========================================
+============================================
 Tests the complete system flow for every user type:
   SUPER_ADMIN → ADMIN → GYM_OWNER → GYM_MANAGER → Public (chatbot)
 
