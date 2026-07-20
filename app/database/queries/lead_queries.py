@@ -26,6 +26,25 @@ async def create_lead(db: psycopg.AsyncConnection, data: dict) -> dict:
         return await cur.fetchone()
 
 
+async def get_lead_by_phone(db: psycopg.AsyncConnection, gym_id: int, phone: str) -> dict | None:
+    """Find an existing lead for this gym by phone, ignoring formatting (+91, spaces, etc.).
+    Matches on the last 10 digits so 9876543210 == +91 98765 43210 == 919876543210."""
+    async with db.cursor(row_factory=psycopg.rows.dict_row) as cur:
+        await cur.execute(
+            """
+            SELECT id, lead_name, phone, status, lead_score, created_at
+            FROM chat_leads
+            WHERE gym_id = %(gym_id)s
+              AND right(regexp_replace(phone, '\\D', '', 'g'), 10)
+                = right(regexp_replace(%(phone)s, '\\D', '', 'g'), 10)
+            ORDER BY id DESC
+            LIMIT 1
+            """,
+            {"gym_id": gym_id, "phone": phone or ""},
+        )
+        return await cur.fetchone()
+
+
 async def get_lead_by_id(db: psycopg.AsyncConnection, lead_id: int, gym_id: int) -> dict | None:
     async with db.cursor(row_factory=psycopg.rows.dict_row) as cur:
         await cur.execute(

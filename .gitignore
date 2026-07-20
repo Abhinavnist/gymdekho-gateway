@@ -20,6 +20,11 @@ docs_build
 site_build
 venv
 docs.zip
+
+# secrets — never commit
+.env
+.env.*
+!.env.example
 archive.zip
 
 # vim temporary files

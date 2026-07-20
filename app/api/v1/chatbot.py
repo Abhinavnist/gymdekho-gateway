@@ -8,6 +8,9 @@ router = APIRouter(prefix="/chatbot", tags=["Chatbot"])
 
 # In-memory session store (replace with Redis in production)
 _sessions: dict[str, list[dict]] = {}
+# Tracks whether a lead has already been captured for a session, so the bot
+# stops re-asking and answers freely once contact details are saved.
+_lead_captured: dict[str, bool] = {}
 
 
 @router.post("/message")
@@ -21,7 +24,12 @@ async def chat_message(body: ChatbotMessageRequest, db: DBConn):
     else:
         history = _sessions.get(session_key, [])
 
-    reply = await chatbot_service.chat(db, body.gym_id, body.session_id, body.message, history)
+    lead_already = _lead_captured.get(session_key, False)
+    reply, lead_captured = await chatbot_service.chat(
+        db, body.gym_id, body.session_id, body.message, history, lead_already
+    )
+    if lead_captured:
+        _lead_captured[session_key] = True
 
     # Always maintain server-side history as backup
     server_history = _sessions.get(session_key, [])
